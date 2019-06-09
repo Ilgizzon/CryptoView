@@ -34,21 +34,21 @@ class RealmCrypto: Object {
 
     convenience init(from: LocalCrypto) {
         self.init()
-        self.id = from.id
-        self.name = from.name
-        self.symbol = from.symbol
-        self.rank = from.rank
-        self.price_usd = from.price_usd
-        self.price_btc = from.price_btc
-        self.volume_usd_24h = from.volume_usd_24h
-        self.market_cap_usd = from.market_cap_usd
-        self.available_supply = from.available_supply
-        self.total_supply = from.total_supply
-        self.max_supply = from.max_supply
-        self.percent_change_1h = from.percent_change_1h
-        self.percent_change_24h = from.percent_change_24h
-        self.percent_change_7d = from.percent_change_7d
-        self.last_updated = from.last_updated
+        self.id = from.id ?? ""
+        self.name = from.name ?? ""
+        self.symbol = from.symbol ?? ""
+        self.rank = from.rank ?? ""
+        self.price_usd = from.price_usd ?? ""
+        self.price_btc = from.price_btc ?? ""
+        self.volume_usd_24h = from.volume_usd_24h ?? ""
+        self.market_cap_usd = from.market_cap_usd ?? ""
+        self.available_supply = from.available_supply ?? ""
+        self.total_supply = from.total_supply ?? ""
+        self.max_supply = from.max_supply ?? ""
+        self.percent_change_1h = from.percent_change_1h ?? ""
+        self.percent_change_24h = from.percent_change_24h ?? ""
+        self.percent_change_7d = from.percent_change_7d ?? ""
+        self.last_updated = from.last_updated  ?? ""
     }
     
     func convert() -> LocalCrypto {

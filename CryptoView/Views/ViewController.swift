@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import Alertift
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showSpinner(onView: self.view)
+        Network.getCryptoList{ error in
+            self.removeSpinner()
+            print(error)
+            Alert.message(description: error, type: .Error)
+        }
     }
 
 

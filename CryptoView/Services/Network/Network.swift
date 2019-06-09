@@ -11,13 +11,14 @@ import Alamofire
 
 class Network {
    
-    static func getCryptoList(completion: @escaping (String) -> Void?) {
+    static func getCryptoList(completion: @escaping (String) -> Void) {
         
-        AF.request(Constants.URL, method: .get).responseDecodable{(response: DataResponse<CryptoList>)  in
+        AF.request(Constants.URL, method: .get).responseDecodable{(response: DataResponse <[LocalCrypto]>)  in
             
             switch response.result {
             case .success(let data):
-                DB.updateOrAddData(data: data)
+                print(data.debugDescription)
+             //   DB.updateOrAddData(data: data)
             case .failure(let error):
                 completion(error.localizedDescription)
             }

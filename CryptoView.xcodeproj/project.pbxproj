@@ -23,6 +23,8 @@
 		E49EE4AD22AD73F30012963C /* RealmExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4AC22AD73F30012963C /* RealmExtensions.swift */; };
 		E49EE4B122AD7B5E0012963C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B022AD7B5E0012963C /* Network.swift */; };
 		E49EE4B322AD7DD20012963C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B222AD7DD20012963C /* Constants.swift */; };
+		E49EE4B622AD8DEB0012963C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B522AD8DEB0012963C /* Alert.swift */; };
+		E49EE4B822AD91950012963C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B722AD91950012963C /* ViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		E49EE4AC22AD73F30012963C /* RealmExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtensions.swift; sourceTree = "<group>"; };
 		E49EE4B022AD7B5E0012963C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E49EE4B222AD7DD20012963C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E49EE4B522AD8DEB0012963C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		E49EE4B722AD91950012963C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		F873467B0DCA8662CB7E8850 /* Pods-CryptoViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoViewUITests/Pods-CryptoViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +221,7 @@
 		E49EE4A822AD729F0012963C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E49EE4B422AD8CD90012963C /* Alert */,
 				E49EE4AF22AD7AC40012963C /* Network */,
 				E49EE4AE22AD7AB20012963C /* Database */,
 			);
@@ -227,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E49EE4AC22AD73F30012963C /* RealmExtensions.swift */,
+				E49EE4B722AD91950012963C /* ViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +251,14 @@
 				E49EE4B022AD7B5E0012963C /* Network.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E49EE4B422AD8CD90012963C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE4B522AD8DEB0012963C /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49EE4B622AD8DEB0012963C /* Alert.swift in Sources */,
 				E49EE4A722AD2B2E0012963C /* LocalCrypto.swift in Sources */,
 				E49EE4AD22AD73F30012963C /* RealmExtensions.swift in Sources */,
 				E49EE47322ACFA910012963C /* ViewController.swift in Sources */,
@@ -486,6 +501,7 @@
 				E49EE4AA22AD72D30012963C /* DB.swift in Sources */,
 				E49EE4B122AD7B5E0012963C /* Network.swift in Sources */,
 				E49EE4A522AD15390012963C /* RealmCrypto.swift in Sources */,
+				E49EE4B822AD91950012963C /* ViewControllerExtensions.swift in Sources */,
 				E49EE4B322AD7DD20012963C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
