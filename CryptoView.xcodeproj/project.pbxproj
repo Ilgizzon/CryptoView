@@ -17,6 +17,8 @@
 		E49EE47B22ACFA920012963C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49EE47922ACFA920012963C /* LaunchScreen.storyboard */; };
 		E49EE48622ACFA930012963C /* CryptoViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE48522ACFA930012963C /* CryptoViewTests.swift */; };
 		E49EE49122ACFA930012963C /* CryptoViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE49022ACFA930012963C /* CryptoViewUITests.swift */; };
+		E49EE4A522AD15390012963C /* RealmCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4A422AD15390012963C /* RealmCrypto.swift */; };
+		E49EE4A722AD2B2E0012963C /* LocalCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4A622AD2B2E0012963C /* LocalCrypto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		E49EE48C22ACFA930012963C /* CryptoViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49EE49022ACFA930012963C /* CryptoViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewUITests.swift; sourceTree = "<group>"; };
 		E49EE49222ACFA930012963C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49EE4A422AD15390012963C /* RealmCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCrypto.swift; sourceTree = "<group>"; };
+		E49EE4A622AD2B2E0012963C /* LocalCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCrypto.swift; sourceTree = "<group>"; };
 		F873467B0DCA8662CB7E8850 /* Pods-CryptoViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoViewUITests/Pods-CryptoViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +103,6 @@
 				F873467B0DCA8662CB7E8850 /* Pods-CryptoViewUITests.debug.xcconfig */,
 				2629D17A576D7D5BC7725748 /* Pods-CryptoViewUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,9 +141,9 @@
 		E49EE46F22ACFA910012963C /* CryptoView */ = {
 			isa = PBXGroup;
 			children = (
+				E49EE49F22AD07960012963C /* DataModels */,
+				E49EE49E22AD05E10012963C /* Views */,
 				E49EE47022ACFA910012963C /* AppDelegate.swift */,
-				E49EE47222ACFA910012963C /* ViewController.swift */,
-				E49EE47422ACFA910012963C /* Main.storyboard */,
 				E49EE47722ACFA920012963C /* Assets.xcassets */,
 				E49EE47922ACFA920012963C /* LaunchScreen.storyboard */,
 				E49EE47C22ACFA920012963C /* Info.plist */,
@@ -164,6 +167,40 @@
 				E49EE49222ACFA930012963C /* Info.plist */,
 			);
 			path = CryptoViewUITests;
+			sourceTree = "<group>";
+		};
+		E49EE49E22AD05E10012963C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE47422ACFA910012963C /* Main.storyboard */,
+				E49EE47222ACFA910012963C /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E49EE49F22AD07960012963C /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE4A122AD08B80012963C /* Local */,
+				E49EE4A022AD08A90012963C /* Realm */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		E49EE4A022AD08A90012963C /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE4A422AD15390012963C /* RealmCrypto.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E49EE4A122AD08B80012963C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE4A622AD2B2E0012963C /* LocalCrypto.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,8 +435,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49EE4A722AD2B2E0012963C /* LocalCrypto.swift in Sources */,
 				E49EE47322ACFA910012963C /* ViewController.swift in Sources */,
 				E49EE47122ACFA910012963C /* AppDelegate.swift in Sources */,
+				E49EE4A522AD15390012963C /* RealmCrypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
