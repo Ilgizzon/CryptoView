@@ -11,34 +11,56 @@ import RealmSwift
 
 class DB {
     
+    private static let DBQueue = DispatchQueue(label: "DB thread", attributes: .concurrent)
+    
     static func updateOrAddData(data: [LocalCrypto]?){
-        let realm = Realm.db
-        realm.beginWrite()
-        guard let strongData = data else {
-            realm.cancelWrite()
-            return
-        }
         
-        for crypto in strongData {
-            let realmCrypto = RealmCrypto(from: crypto)
-            realm.add(realmCrypto, update: true)
+        DBQueue.async {
+            autoreleasepool {
+                guard let strongData = data else {
+                    return
+                }
+                
+                let realm = Realm.db
+                for crypto in strongData {
+                    let oldData = getDataById(id: crypto.id ?? "")
+                    crypto.favorite = oldData?.favorite ?? false
+                    let realmCrypto = RealmCrypto(from: crypto)
+                    try! realm.write {
+                        realm.add(realmCrypto, update: true)
+                    }
+                }
+            }
         }
-        realm.cancelWrite()
     }
     
     static func updateOrAddData(data: LocalCrypto?){
-        let realm = Realm.db
-        realm.beginWrite()
-        guard let strongData = data else {
-            realm.cancelWrite()
-            return
+        
+        DBQueue.async {
+            autoreleasepool {
+                guard let strongData = data else {
+                    return
+                }
+                
+                let realm = Realm.db
+                let realmCrypto = RealmCrypto(from: strongData)
+                try! realm.write {
+                    realm.add(realmCrypto, update: true)
+                }
+            }
         }
-        let realmCrypto = RealmCrypto(from: strongData)
-        realm.add(realmCrypto, update: true)
-        realm.cancelWrite()
+        
     }
     
     static func getFavoriteData() -> Results <RealmCrypto>{
         return Realm.db.objects(RealmCrypto.self).filter("favorite == true")
+    }
+    
+    static func getDataById(id: String) -> RealmCrypto? {
+        return Realm.db.object(ofType: RealmCrypto.self, forPrimaryKey: id)
+    }
+    
+    static func getAllData() -> Results <RealmCrypto>{
+        return Realm.db.objects(RealmCrypto.self)
     }
 }

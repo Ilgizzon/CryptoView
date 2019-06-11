@@ -17,8 +17,8 @@ class Network {
             
             switch response.result {
             case .success(let data):
-                print(data.debugDescription)
-             //   DB.updateOrAddData(data: data)
+            //    print(data.debugDescription)
+                DB.updateOrAddData(data: data)
             case .failure(let error):
                 completion(error.localizedDescription)
             }

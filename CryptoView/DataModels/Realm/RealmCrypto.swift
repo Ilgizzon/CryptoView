@@ -49,6 +49,7 @@ class RealmCrypto: Object {
         self.percent_change_24h = from.percent_change_24h ?? ""
         self.percent_change_7d = from.percent_change_7d ?? ""
         self.last_updated = from.last_updated  ?? ""
+        self.favorite = from.favorite
     }
     
     func convert() -> LocalCrypto {

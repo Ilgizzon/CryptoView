@@ -10,8 +10,11 @@
 		120117D7DB98E1006E1E7A35 /* Pods_CryptoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F1F61CD998BD55D6F7B6D0 /* Pods_CryptoView.framework */; };
 		9802376A9A3A3121C1574BBD /* Pods_CryptoViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB32CB07A740FFA45BDAE13 /* Pods_CryptoViewUITests.framework */; };
 		A752809ADF0899A2D6B9FC72 /* Pods_CryptoViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2404E417F61ACC52E543BFF6 /* Pods_CryptoViewTests.framework */; };
+		E424544422AF604D003AE4B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424544322AF604D003AE4B7 /* SecondViewController.swift */; };
+		E424544622AF7745003AE4B7 /* SecondViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424544522AF7745003AE4B7 /* SecondViewControllerUI.swift */; };
+		E424544822AF8B19003AE4B7 /* SecondViewControllerIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424544722AF8B19003AE4B7 /* SecondViewControllerIteractor.swift */; };
 		E49EE47122ACFA910012963C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE47022ACFA910012963C /* AppDelegate.swift */; };
-		E49EE47322ACFA910012963C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE47222ACFA910012963C /* ViewController.swift */; };
+		E49EE47322ACFA910012963C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE47222ACFA910012963C /* MainViewController.swift */; };
 		E49EE47622ACFA910012963C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49EE47422ACFA910012963C /* Main.storyboard */; };
 		E49EE47822ACFA920012963C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49EE47722ACFA920012963C /* Assets.xcassets */; };
 		E49EE47B22ACFA920012963C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49EE47922ACFA920012963C /* LaunchScreen.storyboard */; };
@@ -25,6 +28,14 @@
 		E49EE4B322AD7DD20012963C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B222AD7DD20012963C /* Constants.swift */; };
 		E49EE4B622AD8DEB0012963C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B522AD8DEB0012963C /* Alert.swift */; };
 		E49EE4B822AD91950012963C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE4B722AD91950012963C /* ViewControllerExtensions.swift */; };
+		E4B4640522AE1E3D00792D65 /* CellCrypto.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B4640422AE1E3D00792D65 /* CellCrypto.xib */; };
+		E4B4640722AE223800792D65 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4640622AE223700792D65 /* DoubleExtension.swift */; };
+		E4B4640922AE24BF00792D65 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4640822AE24BF00792D65 /* View.swift */; };
+		E4B4640B22AE33BC00792D65 /* CellCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4640A22AE33BC00792D65 /* CellCrypto.swift */; };
+		E4B4640D22AE3CAE00792D65 /* MainViewControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4640C22AE3CAE00792D65 /* MainViewControllerTableView.swift */; };
+		E4B4641022AE75FA00792D65 /* MainViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4640F22AE75FA00792D65 /* MainViewControllerUI.swift */; };
+		E4B4641222AE7E9500792D65 /* MainViewControllerIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4641122AE7E9500792D65 /* MainViewControllerIteractor.swift */; };
+		E4B4641522AEC13100792D65 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B4641422AEC13100792D65 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +64,12 @@
 		70F1F61CD998BD55D6F7B6D0 /* Pods_CryptoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842197C6201C4504036E5A9A /* Pods-CryptoViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoViewTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoViewTests/Pods-CryptoViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB32CB07A740FFA45BDAE13 /* Pods_CryptoViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E424544322AF604D003AE4B7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E424544522AF7745003AE4B7 /* SecondViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewControllerUI.swift; sourceTree = "<group>"; };
+		E424544722AF8B19003AE4B7 /* SecondViewControllerIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewControllerIteractor.swift; sourceTree = "<group>"; };
 		E49EE46D22ACFA910012963C /* CryptoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49EE47022ACFA910012963C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E49EE47222ACFA910012963C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E49EE47222ACFA910012963C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E49EE47522ACFA910012963C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E49EE47722ACFA920012963C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E49EE47A22ACFA920012963C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +88,14 @@
 		E49EE4B222AD7DD20012963C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E49EE4B522AD8DEB0012963C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		E49EE4B722AD91950012963C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E4B4640422AE1E3D00792D65 /* CellCrypto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellCrypto.xib; sourceTree = "<group>"; };
+		E4B4640622AE223700792D65 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		E4B4640822AE24BF00792D65 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E4B4640A22AE33BC00792D65 /* CellCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCrypto.swift; sourceTree = "<group>"; };
+		E4B4640C22AE3CAE00792D65 /* MainViewControllerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTableView.swift; sourceTree = "<group>"; };
+		E4B4640F22AE75FA00792D65 /* MainViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerUI.swift; sourceTree = "<group>"; };
+		E4B4641122AE7E9500792D65 /* MainViewControllerIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerIteractor.swift; sourceTree = "<group>"; };
+		E4B4641422AEC13100792D65 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		F873467B0DCA8662CB7E8850 /* Pods-CryptoViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoViewUITests/Pods-CryptoViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +175,7 @@
 		E49EE46F22ACFA910012963C /* CryptoView */ = {
 			isa = PBXGroup;
 			children = (
+				E4B4641322AEC0FE00792D65 /* Helpers */,
 				E49EE4AB22AD73BD0012963C /* Extensions */,
 				E49EE4A822AD729F0012963C /* Services */,
 				E49EE49F22AD07960012963C /* DataModels */,
@@ -161,7 +184,6 @@
 				E49EE47722ACFA920012963C /* Assets.xcassets */,
 				E49EE47922ACFA920012963C /* LaunchScreen.storyboard */,
 				E49EE47C22ACFA920012963C /* Info.plist */,
-				E49EE4B222AD7DD20012963C /* Constants.swift */,
 			);
 			path = CryptoView;
 			sourceTree = "<group>";
@@ -187,8 +209,9 @@
 		E49EE49E22AD05E10012963C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4B4640E22AE75D900792D65 /* Classes */,
+				E4B4640322AE1E1A00792D65 /* Cell */,
 				E49EE47422ACFA910012963C /* Main.storyboard */,
-				E49EE47222ACFA910012963C /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,8 +254,10 @@
 		E49EE4AB22AD73BD0012963C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E4B4640822AE24BF00792D65 /* View.swift */,
 				E49EE4AC22AD73F30012963C /* RealmExtensions.swift */,
 				E49EE4B722AD91950012963C /* ViewControllerExtensions.swift */,
+				E4B4640622AE223700792D65 /* DoubleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +284,38 @@
 				E49EE4B522AD8DEB0012963C /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		E4B4640322AE1E1A00792D65 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E4B4640422AE1E3D00792D65 /* CellCrypto.xib */,
+				E4B4640A22AE33BC00792D65 /* CellCrypto.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E4B4640E22AE75D900792D65 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE47222ACFA910012963C /* MainViewController.swift */,
+				E4B4640C22AE3CAE00792D65 /* MainViewControllerTableView.swift */,
+				E4B4640F22AE75FA00792D65 /* MainViewControllerUI.swift */,
+				E4B4641122AE7E9500792D65 /* MainViewControllerIteractor.swift */,
+				E424544322AF604D003AE4B7 /* SecondViewController.swift */,
+				E424544522AF7745003AE4B7 /* SecondViewControllerUI.swift */,
+				E424544722AF8B19003AE4B7 /* SecondViewControllerIteractor.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E4B4641322AEC0FE00792D65 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE4B222AD7DD20012963C /* Constants.swift */,
+				E4B4641422AEC13100792D65 /* UserSettings.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49EE47B22ACFA920012963C /* LaunchScreen.storyboard in Resources */,
+				E4B4640522AE1E3D00792D65 /* CellCrypto.xib in Resources */,
 				E49EE47822ACFA920012963C /* Assets.xcassets in Resources */,
 				E49EE47622ACFA910012963C /* Main.storyboard in Resources */,
 			);
@@ -471,6 +529,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -480,6 +541,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -495,14 +559,24 @@
 			files = (
 				E49EE4B622AD8DEB0012963C /* Alert.swift in Sources */,
 				E49EE4A722AD2B2E0012963C /* LocalCrypto.swift in Sources */,
+				E424544822AF8B19003AE4B7 /* SecondViewControllerIteractor.swift in Sources */,
+				E4B4640D22AE3CAE00792D65 /* MainViewControllerTableView.swift in Sources */,
+				E4B4641022AE75FA00792D65 /* MainViewControllerUI.swift in Sources */,
+				E4B4641222AE7E9500792D65 /* MainViewControllerIteractor.swift in Sources */,
 				E49EE4AD22AD73F30012963C /* RealmExtensions.swift in Sources */,
-				E49EE47322ACFA910012963C /* ViewController.swift in Sources */,
+				E4B4640722AE223800792D65 /* DoubleExtension.swift in Sources */,
+				E49EE47322ACFA910012963C /* MainViewController.swift in Sources */,
+				E4B4640B22AE33BC00792D65 /* CellCrypto.swift in Sources */,
 				E49EE47122ACFA910012963C /* AppDelegate.swift in Sources */,
 				E49EE4AA22AD72D30012963C /* DB.swift in Sources */,
 				E49EE4B122AD7B5E0012963C /* Network.swift in Sources */,
+				E424544422AF604D003AE4B7 /* SecondViewController.swift in Sources */,
+				E4B4640922AE24BF00792D65 /* View.swift in Sources */,
+				E424544622AF7745003AE4B7 /* SecondViewControllerUI.swift in Sources */,
 				E49EE4A522AD15390012963C /* RealmCrypto.swift in Sources */,
 				E49EE4B822AD91950012963C /* ViewControllerExtensions.swift in Sources */,
 				E49EE4B322AD7DD20012963C /* Constants.swift in Sources */,
+				E4B4641522AEC13100792D65 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

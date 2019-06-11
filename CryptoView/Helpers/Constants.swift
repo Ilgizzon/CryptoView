@@ -11,5 +11,8 @@ import Foundation
 class Constants {
     
     static let URL = "https://api.coinmarketcap.com/v1/ticker/"
+    static let CELL_XIB = "CellCrypto"
+    static let REFRESH_STATUS = "REFRESH_STATUS"
+    static let FAVORITE_LIST = "FAVORITE_LIST"
     
 }

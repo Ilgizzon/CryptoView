@@ -10,6 +10,8 @@ target 'CryptoView' do
   pod 'RealmSwift'
   pod 'Alamofire', '~> 5.0.0-beta.5'
   pod 'Alertift', '~> 4.1'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
   target 'CryptoViewTests' do
     inherit! :search_paths
