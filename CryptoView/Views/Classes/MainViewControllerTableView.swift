@@ -9,6 +9,7 @@
 import UIKit
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cryptoList?.count ?? 0
     }
@@ -18,19 +19,29 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         guard let crypto = cryptoList?[indexPath.row].convert() else {
             return UITableViewCell()
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CELL_XIB, for: indexPath) as! CellCrypto
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: Constants.CELL_XIB,
+            for: indexPath
+            ) as! CellCrypto
+        
         cell.setItem(crypto)
+        
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         guard let crypto = cryptoList?[indexPath.row].convert() else {
             return
         }
+        let vc = self.storyboard?.instantiateViewController(
+            withIdentifier: Constants.SECOND_SCREEN_ID
+            ) as! SecondViewController
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         vc.cryptoData = crypto
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(
+            vc,
+            animated: true)
     }
     
 }

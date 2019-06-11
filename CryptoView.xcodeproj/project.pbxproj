@@ -150,6 +150,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E424544922AF9C81003AE4B7 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE47022ACFA910012963C /* AppDelegate.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		E424544A22AF9CA9003AE4B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E49EE47722ACFA920012963C /* Assets.xcassets */,
+				E49EE47922ACFA920012963C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E49EE46422ACFA910012963C = {
 			isa = PBXGroup;
 			children = (
@@ -175,15 +192,14 @@
 		E49EE46F22ACFA910012963C /* CryptoView */ = {
 			isa = PBXGroup;
 			children = (
+				E49EE47C22ACFA920012963C /* Info.plist */,
+				E424544A22AF9CA9003AE4B7 /* Resources */,
+				E424544922AF9C81003AE4B7 /* ApplicationLayer */,
 				E4B4641322AEC0FE00792D65 /* Helpers */,
 				E49EE4AB22AD73BD0012963C /* Extensions */,
 				E49EE4A822AD729F0012963C /* Services */,
 				E49EE49F22AD07960012963C /* DataModels */,
 				E49EE49E22AD05E10012963C /* Views */,
-				E49EE47022ACFA910012963C /* AppDelegate.swift */,
-				E49EE47722ACFA920012963C /* Assets.xcassets */,
-				E49EE47922ACFA920012963C /* LaunchScreen.storyboard */,
-				E49EE47C22ACFA920012963C /* Info.plist */,
 			);
 			path = CryptoView;
 			sourceTree = "<group>";

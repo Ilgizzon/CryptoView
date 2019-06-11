@@ -14,5 +14,7 @@ class Constants {
     static let CELL_XIB = "CellCrypto"
     static let REFRESH_STATUS = "REFRESH_STATUS"
     static let FAVORITE_LIST = "FAVORITE_LIST"
+    static let SECOND_SCREEN_ID = "SecondViewController"
+    static let DATE_FORMAT = "MM-dd-yyyy HH:mm"
     
 }

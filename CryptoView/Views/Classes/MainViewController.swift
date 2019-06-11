@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
         tapListeners()
     }
     
@@ -33,20 +32,20 @@ class MainViewController: UIViewController {
                 return
             }
             strongSelf.makeRequest()
-
         }).disposed(by: bag)
 
         self.navigationItem.rightBarButtonItems![1].rx.tap.subscribe(onNext: {  _ in
             Alert.settings {
                 self.syncWithSettings()
             }
-
         }).disposed(by: bag)
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         syncWithSettings()
         makeRequest(uiTap: true)
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         realmToken?.invalidate()

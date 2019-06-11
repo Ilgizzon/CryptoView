@@ -13,9 +13,14 @@ import UIKit
 extension MainViewController{
     
     func configureUI() {
-        tableView.register(UINib(nibName: Constants.CELL_XIB, bundle: nil), forCellReuseIdentifier: Constants.CELL_XIB)
+        tableView.register(
+            UINib(
+                nibName: Constants.CELL_XIB,
+                bundle: nil
+            ),
+            forCellReuseIdentifier: Constants.CELL_XIB
+        )
         tableView.tableFooterView = UIView()
-
     }
 
 }

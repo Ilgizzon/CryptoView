@@ -21,12 +21,17 @@ extension SecondViewController{
         percentChange1hLabel.text = cryptoData.percent_change_1h
         percentChange24hLabel.text = cryptoData.percent_change_24h
         percentChange7dLabel.text = cryptoData.percent_change_7d
-        lastUpdatedLabel.text = Double(cryptoData.last_updated ?? "")!.dateFormatted(withFormat : "MM-dd-yyyy HH:mm")
+        lastUpdatedLabel.text = Double(cryptoData.last_updated ?? "")!.dateFormatted(withFormat : Constants.DATE_FORMAT)
         configureNavBar()
     }
     
     func configureNavBar(){
-        let favorite = UIBarButtonItem(barButtonSystemItem: cryptoData.favorite == true ?  UIBarButtonItem.SystemItem.trash : UIBarButtonItem.SystemItem.bookmarks, target: nil, action: nil)
+        let favorite = UIBarButtonItem(
+            barButtonSystemItem: cryptoData.favorite == true ?
+                UIBarButtonItem.SystemItem.trash : UIBarButtonItem.SystemItem.bookmarks,
+            target: nil,
+            action: nil
+        )
         self.navigationItem.title = cryptoData.name ?? ""
         self.navigationItem.rightBarButtonItem = favorite
     }

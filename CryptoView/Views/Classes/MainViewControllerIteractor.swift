@@ -13,6 +13,7 @@ extension MainViewController{
     
     
     private func configureRealm() {
+        
         realmToken = cryptoList?.observe { [weak self] change in
             
             guard let strongSelf = self else {
@@ -24,19 +25,37 @@ extension MainViewController{
             case .initial:
                 // Results are now populated and can be accessed without blocking the UI
                 strongSelf.tableView.reloadData()
-            case .update(_, let deletions, let insertions, let modifications):
+            case .update(
+                _,
+                let deletions,
+                let insertions,
+                let modifications
+                ):
                 
                 // Query results have changed, so apply them to the UITableView
                 strongSelf.tableView.beginUpdates()
-                strongSelf.tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
-                                                with: .automatic)
-                strongSelf.tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
-                                                with: .automatic)
-                strongSelf.tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
-                                                with: .automatic)
+                strongSelf.tableView.insertRows(
+                    at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                    with: .automatic
+                )
+                
+                strongSelf.tableView.deleteRows(
+                    at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                    with: .automatic
+                )
+                
+                strongSelf.tableView.reloadRows(
+                    at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                    with: .automatic
+                )
+                
                 strongSelf.tableView.endUpdates()
+                
             case .error(let error):
-                Alert.message(description: error.localizedDescription, type: .Error)
+                Alert.message(
+                    description: error.localizedDescription,
+                    type: .Error
+                )
             }
         }
     }
@@ -55,7 +74,10 @@ extension MainViewController{
             }
             strongSelf.removeSpinner()
             print(error)
-            Alert.message(description: error, type: .Error)
+            Alert.message(
+                description: error,
+                type: .Error
+            )
             strongSelf.reLoader()
         }
     }
@@ -76,7 +98,13 @@ extension MainViewController{
     
     private func reLoader(){
         if runTimer {
-            timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(makeRequest), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(
+                timeInterval: 15,
+                target: self,
+                selector: #selector(makeRequest),
+                userInfo: nil,
+                repeats: false
+            )
         }
     }
 }
