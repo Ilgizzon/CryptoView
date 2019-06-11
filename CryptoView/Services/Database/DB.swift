@@ -34,11 +34,12 @@ class DB {
         }
     }
     
-    static func updateOrAddData(data: LocalCrypto?){
+    static func updateOrAddData(data: LocalCrypto?, completion: @escaping () -> Void  = {}){
         
         DBQueue.async {
             autoreleasepool {
                 guard let strongData = data else {
+                    completion()
                     return
                 }
                 
@@ -46,6 +47,7 @@ class DB {
                 let realmCrypto = RealmCrypto(from: strongData)
                 try! realm.write {
                     realm.add(realmCrypto, update: true)
+                    completion()
                 }
             }
         }
@@ -62,5 +64,16 @@ class DB {
     
     static func getAllData() -> Results <RealmCrypto>{
         return Realm.db.objects(RealmCrypto.self)
+    }
+    
+    static func clearDB(){
+        DBQueue.async {
+            autoreleasepool {
+                let realm = Realm.db
+                try! realm.write {
+                    realm.deleteAll()
+                }
+            }
+        }
     }
 }

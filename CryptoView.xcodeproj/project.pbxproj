@@ -13,6 +13,7 @@
 		E424544422AF604D003AE4B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424544322AF604D003AE4B7 /* SecondViewController.swift */; };
 		E424544622AF7745003AE4B7 /* SecondViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424544522AF7745003AE4B7 /* SecondViewControllerUI.swift */; };
 		E424544822AF8B19003AE4B7 /* SecondViewControllerIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424544722AF8B19003AE4B7 /* SecondViewControllerIteractor.swift */; };
+		E462CB4B22AFB5C500381432 /* DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462CB4A22AFB5C500381432 /* DBTests.swift */; };
 		E49EE47122ACFA910012963C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE47022ACFA910012963C /* AppDelegate.swift */; };
 		E49EE47322ACFA910012963C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE47222ACFA910012963C /* MainViewController.swift */; };
 		E49EE47622ACFA910012963C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49EE47422ACFA910012963C /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		E424544322AF604D003AE4B7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E424544522AF7745003AE4B7 /* SecondViewControllerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewControllerUI.swift; sourceTree = "<group>"; };
 		E424544722AF8B19003AE4B7 /* SecondViewControllerIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewControllerIteractor.swift; sourceTree = "<group>"; };
+		E462CB4A22AFB5C500381432 /* DBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTests.swift; sourceTree = "<group>"; };
 		E49EE46D22ACFA910012963C /* CryptoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49EE47022ACFA910012963C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E49EE47222ACFA910012963C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				E49EE48522ACFA930012963C /* CryptoViewTests.swift */,
 				E49EE48722ACFA930012963C /* Info.plist */,
+				E462CB4A22AFB5C500381432 /* DBTests.swift */,
 			);
 			path = CryptoViewTests;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49EE48622ACFA930012963C /* CryptoViewTests.swift in Sources */,
+				E462CB4B22AFB5C500381432 /* DBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
